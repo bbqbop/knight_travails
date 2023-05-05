@@ -15,7 +15,7 @@ const Knight = function(){
         const queue = [];
         queue.push(pos);
         while (queue.length > 0){
-            const move = queue[0]
+            const move = queue.shift()
             knightRange.forEach(([x, y]) => {
                 const newRow = move.pos[0] + x;
                 const newCol = move.pos[1] + y;
@@ -26,7 +26,6 @@ const Knight = function(){
                 move.nextMoves.push(new Move(newRow, newCol));  
                 })
             move.nextMoves.forEach(move => queue.push(move));
-            queue.shift()
         }
         return pos
     };
