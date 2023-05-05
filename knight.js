@@ -14,7 +14,7 @@ const Knight = function(){
         // populate possible moves in level-order
         const queue = [];
         queue.push(pos);
-        while (queue.length >= 1){
+        while (queue.length > 0){
             const move = queue[0]
             knightRange.forEach(([x, y]) => {
                 const newRow = move.pos[0] + x;
