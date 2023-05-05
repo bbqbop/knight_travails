@@ -54,7 +54,7 @@ const Knight = function(){
         knightMoves
     }
 }
-
+module.exports = Knight;
 const myKnight = new Knight();
 
 myKnight.knightMoves([0,0], [6,6])
