@@ -41,7 +41,6 @@ const Knight = function(){
                 queue.push({ move: move, path: [...path, move.pos] });
             });
         }
-        console.log('here');
         return null; // no path found
     }
     function knightMoves(start, target){
